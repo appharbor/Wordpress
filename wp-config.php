@@ -74,6 +74,8 @@ $table_prefix  = 'wp_';
  */
 define('WPLANG', '');
 
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
 /**
  * For developers: WordPress debugging mode.
  *
