@@ -17,16 +17,19 @@ use System\Configuration;
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
+
+parse_str(str_replace(';', '&', Configuration\ConfigurationManager::$AppSettings->get_Item("MYSQL_CONNECTION_STRING")));
+
+define('DB_NAME', $database);
 
 /** MySQL database username */
-define('DB_USER', 'username_here');
+define('DB_USER', $uid);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', $pwd);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $server);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
